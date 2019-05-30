@@ -45,7 +45,7 @@ a {
 #navigationWrapper {
     width: 100%;
     display: flex;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     align-items: center;
     justify-content: center;
     flex-flow: column;
@@ -55,8 +55,9 @@ a {
 }
 .mainLi {
     list-style: none;
-    padding: 0 25px;
+    padding: 20px;
 }
+
 .mainLinks {
     color: #b27300;
     font-size: 2.4rem;
@@ -64,7 +65,7 @@ a {
     font-weight: 400;
     position: relative;
 }
-.fa-search {
+#mainSearchLink {
     font-size: 2.4rem;
     transition: all ease-in-out 220ms;
     position: relative;
@@ -72,6 +73,17 @@ a {
     display: flex !important;
     align-items: center;
     cursor: pointer;
+}
+#mainSearchLink {
+    padding: 20px;
+}
+#mainSearchLink:hover {
+    background-color: #b27300;
+}
+.activeState {
+    color: #fff;
+    background-color: #b27300;
+    border-bottom: 3px solid #000000;
 }
 .mainLinks::before {
     content: "";
@@ -100,9 +112,9 @@ a {
     -ms-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-#logoWrapper {
+/* #logoWrapper {
     margin-bottom: 20px;
-}
+} */
 .logo {
     color: #000;
     font-family: "Lobster", cursive;
@@ -126,7 +138,41 @@ a {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-
+#searchContainer {
+    margin-top: 164px;
+    position: absolute;
+    width: 100%;
+    background-color: #b17200;
+    padding: 25px;
+    display: flex;
+    transition: all ease-in-out 400ms;
+    justify-content: center;
+    opacity: 0;
+}
+#searchContainer.on {
+    opacity: 100;
+}
+#searchBar {
+    font-size: 2.4rem;
+    border: 0;
+    padding: 10px;
+    width: 50%;
+    border-radius: 25px;
+    background-color: #d5d5d5;
+}
+#searchIcon {
+    transform: translateX(-40px);
+    font-size: 2.4rem;
+    transition: all ease-in-out 220ms;
+    position: relative;
+    color: #000;
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+}
+#searchIcon:hover {
+    color: #b27300;
+}
 .home-page-watch {
     background: url(watch3.png);
     background-size: contain;

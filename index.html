@@ -15,47 +15,56 @@
 
 <body>
     <div class="mainWrapper">
-            <header id ="mainHeader">
-                    <nav id="navigationWrapper">
-                            <div id="logoWrapper">
-                                <a class="logo" href="#">
-                                    Knight
-                                </a>
-                            </div>
-                            <ul id="mainNavigation">
-                                <li class="mainLi">
-                                    <a class="mainLinks" href="#">Home</a>
-                                </li>
-                                <li class="mainLi">
-                                    <a class="mainLinks" href="#">Watches</a>
-                                    <ul id="subMenu">
-                                        <li class="subLis"><a class="subLinks">Men</a></li>
-                                        <li class="subLis"><a class="subLinks">Women</a></li>
-                                    </ul>
-                                </li>
-                                <li class="mainLi">
-                                    <a class="mainLinks" href="#">About</a>
-                                </li>
-                                <li class="mainLi">
-                                    <a class="mainLinks" href="#">Contact</a>
-                                </li>
-                                <i class="fas fa-search"></i>
-                            </ul>
-                        </nav>
-            </header>
+        <header id="mainHeader">
+            <nav id="navigationWrapper">
+                <div id="logoWrapper">
+                    <a class="logo" href="#">
+                        Knight
+                    </a>
+                </div>
+                <ul id="mainNavigation">
+                    <li class="mainLi">
+                        <a class="mainLinks" href="#">Home</a>
+                    </li>
+                    <li class="mainLi">
+                        <a class="mainLinks" href="#">Watches</a>
+                        <ul id="subMenu">
+                            <li class="subLis"><a class="subLinks">Men</a></li>
+                            <li class="subLis"><a class="subLinks">Women</a></li>
+                        </ul>
+                    </li>
+                    <li class="mainLi">
+                        <a class="mainLinks" href="#">About</a>
+                    </li>
+                    <li class="mainLi">
+                        <a class="mainLinks" href="#">Contact</a>
+                    </li>
+                    <i id ="mainSearchLink" class="fas fa-search"></i>
+                </ul>
+            </nav>
+        </header>
         <section id="landingCard">
+            <div id="searchContainer">
+                <input id="searchBar" placeholder="Search" type="text" />
+                <i id ="searchIcon" class="fas fa-search"></i>
+            </div>
             <div id="landingTextWrapper">
-                    <div class="welcomeTextContainer">
-                            <h1 class="knight-watches-title animated fadeInRight">Knight Watches</h1>
-                            <p class="card-1-text-container-paragraph animated fadeInRight">The sleekest, cleanest, meanest design for a
-                                time piece you
-                                can find.</p>
-                            <div class="shop-now-button  animated fadeIn"><a class="shop-now" href="#watches">Shop Now<i
-                                        class="fas fa-arrow-right"></i></a></div>
+                <div class="welcomeTextContainer">
+                    <h1 class="knight-watches-title animated fadeInRight">Knight Watches</h1>
+                    <p class="card-1-text-container-paragraph animated fadeInRight">The sleekest, cleanest, meanest
+                        design for a
+                        time piece you
+                        can find.</p>
+                    <div class="shop-now-button  animated fadeIn">
+                        <a class="shop-now" href="#watches">Shop Now
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
+                </div>
             </div>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

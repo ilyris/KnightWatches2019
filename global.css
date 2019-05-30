@@ -80,7 +80,7 @@ a {
 #mainSearchLink:hover {
     background-color: #b27300;
 }
-.activeState {
+#mainSearchLink.activeState {
     color: #fff;
     background-color: #b27300;
     border-bottom: 3px solid #000000;

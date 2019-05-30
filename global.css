@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Montserrat|Oswald");
+
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #010101;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    color: #fff;
+    font-size: 10px;
+}
+ li {
+     list-style: none;
+ }
+ a {
+     text-decoration: none;
+ }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+}
+/* Navigation Menu */
+#mainHeader {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+    top: 0;
+}
+#navigationWrapper {
+    width: 100%;
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+#mainNavigation {
+    display: flex;
+}
+.mainLi {
+    list-style: none;
+    padding: 0 25px;
+}
+.mainLinks {
+    color: #b27300;
+    font-size: 2.4rem;
+    transition: all ease-in-out 220ms;
+    font-weight: 400;
+    position: relative;
+}
+.fa-search {
+    font-size: 2.4rem;
+    transition: all ease-in-out 220ms;
+    position: relative;
+    color: #000;
+    display: flex !important;
+    align-items: center;
+    cursor: pointer;
+}
+.mainLinks::before {
+    content: "";
+    position: absolute;
+    bottom: 45%;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #000000d4;
+    display: block;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+    transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  .mainLinks:hover::before {
+    -webkit-transform-origin: right top;
+    -ms-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+#logoWrapper {
+    margin-bottom: 20px;
+}
+.logo {
+    color: #000;
+    font-family: "Lobster", cursive;
+    transition: all ease-in-out 200ms;
+    font-size: 6rem;
+    letter-spacing: 1px;
+}
+.logo:hover {
+    color: #b27300;
+}
+#subMenu {
+    display: none;
+}
+/* Landing Page */
+#landingCard {
+    height: 100vh;
+    width: 100%;
+    background: url(landingPageBG2.png);
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.home-page-watch {
+    background: url(watch3.png);
+    background-size: contain;
+    min-width: 200px;
+    min-height: 400px;
+    background-repeat: no-repeat;
+    animation-delay: 1500ms;
+    margin-left: 50px;
+}
+.welcomeTextContainer {
+    width: 500px;
+    margin-bottom: 50px;
+}
+#landingTextWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+}
+.knight-watches-title {
+    font-size: 5rem;
+    color: #b27300;
+    margin: 0;
+    animation-duration: 1s;
+    padding-bottom: 20px;
+}
+
+.knight-watches-title::After {
+    content: '\00a9';
+    font-size: 1.4rem;
+    position: absolute;
+}
+
+.card-1-text-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.main-header {
+    font-size: 35rem;
+    color: #4342422e;
+}
+.card-1-text-container-paragraph {
+    font-size: 2.4rem;
+    padding-bottom: 20px;
+}
+
+.shop-now-button {
+    animation-duration: 1500ms;
+    animation-delay: 1s;
+    padding-top: 20px;
+}
+
+.shop-now {
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 2rem;
+    background: #b27300;
+    color: #101010;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+}
+
+.shop-now:hover {
+    color: #fff;
+}
+
+.shop-now:hover::after {
+    color: #fff;
+}
+
+.fa-arrow-right {
+    padding-left: 10px;
+}

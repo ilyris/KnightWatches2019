@@ -13,7 +13,3 @@ function toggleSearchBar() {
         mainSearchLink.classList.remove('activeState');
     }
 }
-
-function toggleSearchLinkActiveState() {
-
-}

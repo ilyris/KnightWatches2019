@@ -51,6 +51,7 @@ a {
 }
 #mainNavigation {
     display: flex;
+
 }
 .mainLi {
     list-style: none;
@@ -60,7 +61,7 @@ a {
     background: #d5d5d5;
 }
 .mainLi:hover .mainLinks {
-    color: #fff;
+    color: #000;
 }
 
 .mainLinks {
@@ -134,21 +135,31 @@ a {
 .logo:hover {
     color: #b27300;
 }
-#subMenu {
-    display: flex;
-    visibility: hidden;
+#subMenuWrapper {
     opacity: 0;
     position: absolute;
     background: #d8d7d7;
     transition: all ease-in-out 300ms;
-    height: 300px;
+    visibility: hidden;
     right: 0;
     justify-content: center;
     left: 0;
     top: 100%;
     width: 100%;
+    padding: 25px;
 }
-.dropDownParent:hover > #subMenu {
+#subMenu {
+    display: flex;
+    justify-content: center;
+}
+#rowWatchContainerWrapper {
+    display: flex;
+    flex-direction: column;
+}
+.rowWatchContainer {
+    display: flex;
+}
+.dropDownParent:hover > #subMenuWrapper {
     visibility: visible;
     opacity: 100;
 }
@@ -166,7 +177,7 @@ a {
     transition: all ease-in-out 200ms;
 }
 .subLinks:hover {
-    transform: scale(1.2);
+    opacity: 0.8;
 }
 img {
     width: 100px;
@@ -175,28 +186,33 @@ img {
 .categorySection {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    margin: 5px 5px 10px 0;
-    padding-left: 5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
     border-left: 2px solid black;
+}
+
+.categoryImageLink {
+    transition: all ease-in-out 200ms;
+    margin-left: 25px;
+}
+.categoryImageLink.mens {
+    margin-bottom: 15px;
+}
+.categoryImageLink:hover {
+    transform: scale(1.05);
 }
 .categoryImage {
     background: url(landingPageBG2.png);
     background-position: center;
-    width: 150px;
     display: flex;
-    height: 130px;
+    width: 350px;
+    height: 175px;
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 10px;
     font-size: 1.8rem;
     color: #fff;
-}
-.categoryImageLink {
-    transition: all ease-in-out 200ms;
-}
-.categoryImageLink:hover {
-    transform: scale(1.05);
 }
 /* Landing Page */
 #landingCard {

@@ -104,9 +104,12 @@ a {
     cursor: pointer;
 }
 .searchBarItem.activeState {
-    color: #fff;
     background-color: #b27300;
     border-bottom: 3px solid #000000;
+}
+.searchBarItem.activeState #mainSearchLink {
+    color: #fff;
+
 }
 
 

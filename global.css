@@ -71,6 +71,8 @@ a {
 .mainLi {
     list-style: none;
     padding: 20px;
+    display: flex;
+    align-items: center;
 }
 .searchBarItem {
     padding: 20px;
@@ -105,7 +107,7 @@ a {
 }
 .searchBarItem.activeState {
     background-color: #b27300;
-    border-bottom: 3px solid #000000;
+    border-bottom: 3px solid #d8d7d7;
 }
 .searchBarItem.activeState #mainSearchLink {
     color: #fff;
@@ -138,7 +140,7 @@ a {
     right: 0;
     justify-content: center;
     left: 0;
-    top: 100%;
+    top: 99%;
     width: 100%;
     padding: 25px;
     z-index: 10;
@@ -275,7 +277,7 @@ img {
 }
 .welcomeTextContainer {
     width: 500px;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
 }
 #landingTextWrapper {
     display: flex;
@@ -365,10 +367,10 @@ img {
     padding-bottom: 5px;
 }
 .specificTitle {
-    font-size: 3rem;
+    font-size: 6rem;
     font-family: lobster;
     letter-spacing: 2px;
-    font-weight: 100;
+    font-weight: 500;
     color: #000000;
 }
 .listOfSeries {
@@ -376,7 +378,14 @@ img {
     justify-content: center;
 }
 #ourSeriesWrapper .subLinks {
-    padding: 10px;
+    padding: 10px 25px;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+#ourSeriesWrapper .subLinks img {
+    width: 200px;
+    height: 300px;
+    padding-bottom: 25px;
 }
 /* Footer */
 #footer {

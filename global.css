@@ -88,13 +88,13 @@ a {
 
 .mainLinks {
     color: #b27300;
-    font-size: 2.4rem;
+    font-size: 2rem;
     transition: all ease-in-out 120ms;
     font-weight: 400;
     position: relative;
 }
 #mainSearchLink {
-    font-size: 2.4rem;
+    font-size: 2rem;
     transition: all ease-in-out 120ms;
     position: relative;
     color: #000;
@@ -386,6 +386,67 @@ img {
     width: 200px;
     height: 300px;
     padding-bottom: 25px;
+}
+/* About Watches Section */
+#showcaseProject {
+    padding: 50px 0;
+}
+.watchContainer {
+    display: flex;
+    padding: 0 50px 50px 50px;
+    
+}
+.watchContainer:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.aboutWatchText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.watchtitle {
+    font-size: 3rem;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #b17200;
+    padding-bottom: 10px;
+}
+.watchText {
+    letter-spacing: 3px;
+    font-size: 2rem;
+    text-align: justify;
+    width: 80%;
+}
+.watchImageContainer {
+    width: 50%;
+    overflow: hidden;
+}
+.watchImageContainer img {
+    width: 100%;
+    height: 500px;
+    transition: all ease-in-out 600ms;
+}
+.watchImageContainer:hover img {
+    transform: scale(1.2);
+}
+.discoverButtonContainer {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.discoverButton {
+    padding: 15px 30px;
+    border: 2px solid #fff;
+    font-size: 2rem;
+    color: #fff;
+    transition: all ease-in-out 200ms;
+}
+.discoverButton:hover {
+    background: #b17200;
 }
 /* Footer */
 #footer {

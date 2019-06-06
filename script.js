@@ -1,6 +1,7 @@
 // Global Variables
 const mainSearchLink = document.querySelector('.searchBarItem');
 const searchBarContainer = document.getElementById('searchContainer');
+const clearSearchBarButton = document.getElementById('clearSearchBarButton');
 
 // const bodyContainer = document.querySelector('body');
 
@@ -16,6 +17,7 @@ window.onload = () => {
 
 mainSearchLink.addEventListener('click', toggleSearchBar, false);
 document.addEventListener('click',clickOffSearch, false);
+clearSearchBarButton.addEventListener('click', clearSearchBar, false);
 
 // add animated classes and add targeting classes
 function animateElements() {
@@ -84,4 +86,8 @@ function addAnimatedClasses() {
         aboutWatchText[i].classList.add('animated');
     }
 
+}
+function clearSearchBar() {
+    const searchBar = document.getElementById('searchBar');
+    searchBar.value ="";
 }

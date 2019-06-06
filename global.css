@@ -302,32 +302,50 @@ img {
     background-repeat: no-repeat;
 }
 #searchContainer {
-    display: flex;
+    visibility: hidden;
     position: absolute;
     width: 100%;
     background-color: #b17200;
     padding: 25px;
     transition: all ease-in-out 400ms;
-    justify-content: center;
     opacity: 0;
     left: 0;
     top: 100%;
 }
 #searchContainer.on {
     opacity: 100;
+    visibility: visible;
 }
-
+#searchForm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 #searchBar {
     font-size: 2.4rem;
     border: 0;
-    padding: 10px;
-    width: 50%;
+    padding: 10px 10px 10px 20px;
+    width: 70%;
     border-radius: 25px;
     background-color: #d5d5d5;
     outline-width: 0;
 }
+#clearSearchBarButton {
+    background: none;
+    border: none;
+    position: relative;
+    right: 80px;
+    outline: none;
+}
+#clearSearchBarButton i {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all ease-in-out 220ms;
+}
+#clearSearchBarButton:hover i {
+    color: #b17200;
+}
 #searchIcon {
-    transform: translateX(-40px);
     font-size: 2.4rem;
     transition: all ease-in-out 220ms;
     position: relative;
@@ -335,6 +353,7 @@ img {
     display: flex !important;
     align-items: center;
     cursor: pointer;
+    right: 75px;
 }
 #searchIcon:hover {
     color: #b27300;
@@ -425,14 +444,14 @@ img {
     background-color: #d8d7d7;
 }
 #ourSeriesWrapper {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 #ourSeriesTitleWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 70px 0;
+    padding: 40px 0;
 }
 .generalTitle {
     font-size: 1.6rem;

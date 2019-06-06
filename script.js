@@ -8,23 +8,14 @@ const searchBarContainer = document.getElementById('searchContainer');
 window.onscroll = () => {
     toggleStickyNavbar();
     toggleScrollTopButton();
-    animateElements()
+    animateElements();
 }
 window.onload = () => {
     addAnimatedClasses();
 }
 
-function addAnimatedClasses() {
-    const watchImageContainer = document.getElementsByClassName('watchImageContainer');
-    const aboutWatchText = document.getElementsByClassName('aboutWatchText');
-    for(let i = 0; i < watchImageContainer.length; i++) {
-        watchImageContainer[i].classList.add('animated');
-        aboutWatchText[i].classList.add('animated');
-    }
-
-}
-// bodyContainer.addEventListener('click', clickOffSearch, false);
 mainSearchLink.addEventListener('click', toggleSearchBar, false);
+document.addEventListener('click',clickOffSearch, false);
 
 // add animated classes and add targeting classes
 function animateElements() {
@@ -43,14 +34,6 @@ function animateElements() {
         watchImageContainer[2].classList.add('fadeInLeft');
         aboutWatchText[2].classList.add("fadeInRight");
     }
-    if(yPosition >= 3100 ) {
-        watchImageContainer[3].classList.add('fadeInRight');
-        aboutWatchText[3].classList.add("fadeInLeft");
-    }
-    if(yPosition >= 3700 ) {
-        watchImageContainer[4].classList.add('fadeInLeft');
-        aboutWatchText[4].classList.add("fadeInRight");
-    }
 }
 
 
@@ -63,15 +46,16 @@ function toggleSearchBar() {
     }
 }
 
-// function clickOffSearch(event) {
-//     const yPosition = event.clientY;
-//     if(searchBarContainer.classList.contains("on")=== true) {
-//         if(yPosition >= 263) {
-//             searchBarContainer.classList.remove('on');
-//             mainSearchLink.classList.remove('activeState');
-//         }
-//     }
-// }
+function clickOffSearch(event) {
+    const searchBarLink = document.querySelector('.searchBarItem');
+    const searchBar = document.getElementById('searchContainer');
+    // tracking the users clicks, if the clicks are within these three elements, then return nothing. Which will not close the search bar
+    if(event.target.closest('#logoWrapper') || event.target.closest('#mainNavigation') || event.target.closest('#searchContainer')) return;
+
+    // If the users click is outside of the search bar then the search bar will close.
+    searchBar.classList.remove('on');
+    searchBarLink.classList.remove('activeState');
+}
 
 function toggleStickyNavbar() {
     const mainNavigationContainer = document.getElementById('mainNavigation');
@@ -90,8 +74,14 @@ const toggleScrollTopButton = () => {
         topScrollButton.classList.remove("active");
       }
   };
-function animateWatchDivs() {
 
-
+  
+function addAnimatedClasses() {
+    const watchImageContainer = document.getElementsByClassName('watchImageContainer');
+    const aboutWatchText = document.getElementsByClassName('aboutWatchText');
+    for(let i = 0; i < watchImageContainer.length; i++) {
+        watchImageContainer[i].classList.add('animated');
+        aboutWatchText[i].classList.add('animated');
+    }
 
 }

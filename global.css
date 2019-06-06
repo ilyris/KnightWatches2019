@@ -311,11 +311,12 @@ img {
     justify-content: center;
     opacity: 0;
     left: 0;
-    top: 64px;
+    top: 100%;
 }
 #searchContainer.on {
     opacity: 100;
 }
+
 #searchBar {
     font-size: 2.4rem;
     border: 0;
@@ -431,8 +432,7 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
-    margin: 50px 0;
+    padding: 70px 0;
 }
 .generalTitle {
     font-size: 1.6rem;
@@ -526,6 +526,28 @@ img {
 .discoverButton:hover {
     background: #b17200;
 }
+/* Gender Selection Section */
+#genderSelection {
+    padding-top: 100px;
+}
+#genderContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+.gender {
+    flex-basis: 47%;
+    height: 400px;
+}
+.gender img {
+    height: 100%;
+    width: 100%;
+}
+.genderTitle {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
 /* Footer */
 #footer {
     width: 100%;
@@ -559,14 +581,14 @@ img {
     transition: all ease 300ms;
 }
 
-#mainFooter .footerLinks li:hover {
-    padding-left: 10px;
-}
-
 #mainFooter .footerLinks li a {
     text-decoration: none;
     color: #fff;
     font-size: 18px;
+}
+#mainFooter .footerLinks li a:hover {
+    text-decoration: underline;
+    color: #d8d7d7;
 }
 
 .company-icons i {

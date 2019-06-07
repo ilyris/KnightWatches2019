@@ -67,7 +67,7 @@ function toggleStickyNavbar() {
         mainNavigationContainer.classList.remove("sticky");
     }
 }
-const toggleScrollTopButton = () => {
+function toggleScrollTopButton() {
     const topScrollButton = document.querySelector(".top-scroll-container");
     let scrollPosition = window.scrollY;
     if (scrollPosition >= 1000) {
@@ -75,7 +75,7 @@ const toggleScrollTopButton = () => {
     } else if (scrollPosition <= 999) {
         topScrollButton.classList.remove("active");
       }
-  };
+  }
 
   
 function addAnimatedClasses() {

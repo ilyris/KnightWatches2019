@@ -331,16 +331,16 @@ img {
     outline-width: 0;
 }
 #clearSearchBarButton {
-    background: none;
-    border: none;
     position: relative;
-    right: 80px;
-    outline: none;
+    right: 90px;
+    display: flex;
+    align-items: center;
 }
 #clearSearchBarButton i {
     font-size: 3rem;
     cursor: pointer;
     transition: all ease-in-out 220ms;
+    color: #000;
 }
 #clearSearchBarButton:hover i {
     color: #b17200;
@@ -459,7 +459,7 @@ img {
     padding-bottom: 5px;
 }
 .specificTitle {
-    font-size: 6rem;
+    font-size: 8rem;
     font-family: lobster;
     letter-spacing: 2px;
     font-weight: 500;
@@ -546,26 +546,32 @@ img {
     background: #b17200;
 }
 /* Gender Selection Section */
-#genderSelection {
+#moreSection {
     padding-top: 100px;
 }
-#genderContainer {
+#moreContainer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
 }
-.gender {
-    flex-basis: 47%;
+.MoreInfoContainer {
+    flex-basis: 50%;
     height: 400px;
+    display: flex;
+    flex-direction: column;
 }
-.gender img {
-    height: 100%;
+.MoreInfoContainer img {
+    height: 90%;
     width: 100%;
 }
-.genderTitle {
+.MoreInfoContainerTitle {
     text-align: center;
     font-size: 3rem;
     color: #fff;
+    margin: 0 auto;
+}
+.MoreInfoContainerTitle:hover {
+    border-bottom: 2px solid #fff;
 }
 /* Footer */
 #footer {
@@ -633,7 +639,9 @@ img {
 .company-icons li a {
     text-decoration: none;
 }
-
+#mainFooter #logoWrapper {
+    padding-bottom: 40px;
+}
 .icon-container {
     text-align: center;
     display: flex;

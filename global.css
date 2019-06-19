@@ -35,6 +35,12 @@ a {
     margin: 0;
     padding: 0;
 }
+.show {
+    visibility: visible;
+}
+.hide {
+    visibility: hidden;
+}
 /* Navigation Menu */
 #mainHeader {
     width: 100%;
@@ -94,7 +100,8 @@ a {
     font-weight: 400;
     position: relative;
 }
-#mainSearchLink {
+#mainSearchLink,
+#shoppingCart {
     font-size: 2rem;
     transition: all ease-in-out 120ms;
     position: relative;
@@ -131,18 +138,26 @@ a {
     color: #b27300;
 }
 #subMenuWrapper {
-    opacity: 0;
     position: absolute;
+    opacity: 0;
     background: #d8d7d7;
-    transition: all ease-in-out 300ms;
-    visibility: hidden;
-    right: 0;
-    justify-content: center;
+    transition: all ease-in-out 100ms;
     left: 0;
     top: 99%;
     width: 100%;
     padding: 25px;
     z-index: 10;
+    visibility: hidden;
+}
+#subMenuWrapper.show,
+#subMenu.show {
+    opacity: 1;
+    visibility: visible;
+    color: #000;
+}
+.mainLi.activeState {
+    background: #d5d5d5;
+    color: #000;
 }
 #subMenuTitle {
     color: #000;
@@ -155,6 +170,8 @@ a {
 #subMenu {
     display: flex;
     justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 600ms;
 }
 #rowWatchContainerWrapper {
     display: flex;
@@ -163,9 +180,11 @@ a {
 .rowWatchContainer {
     display: flex;
 }
-.dropDownParent:hover > #subMenuWrapper {
+/* .dropDownParent:hover > #subMenuWrapper {
     visibility: visible;
-    opacity: 100;
+} */
+.dropDownParent:hover  #subMenu {
+    opacity: 1;
 }
 .subLis {
     padding: 10px 20px;
@@ -345,15 +364,20 @@ img {
 #clearSearchBarButton:hover i {
     color: #b17200;
 }
-#searchIcon {
-    font-size: 2.4rem;
-    transition: all ease-in-out 220ms;
+#searchButton {
     position: relative;
-    color: #000;
     display: flex !important;
     align-items: center;
     cursor: pointer;
     right: 75px;
+    border: none;
+    background: none;
+    outline: none;
+}
+#searchIcon {
+    font-size: 2.4rem;
+    transition: all ease-in-out 220ms;
+    color: #000;
 }
 #searchIcon:hover {
     color: #b27300;

@@ -2,6 +2,8 @@
 const mainSearchLink = document.querySelector('.searchBarItem');
 const searchBarContainer = document.getElementById('searchContainer');
 const clearSearchBarButton = document.getElementById('clearSearchBarButton');
+const startSearchButton = document.getElementById('searchIcon');
+const searchForm = document.getElementById('searchForm');
 
 // const bodyContainer = document.querySelector('body');
 
@@ -18,6 +20,7 @@ window.onload = () => {
 mainSearchLink.addEventListener('click', toggleSearchBar, false);
 document.addEventListener('click',clickOffSearch, false);
 clearSearchBarButton.addEventListener('click', clearSearchBar, false);
+
 
 // add animated classes and add targeting classes
 function animateElements() {
@@ -47,10 +50,29 @@ function toggleSearchBar() {
         mainSearchLink.classList.remove('activeState');
     }
 }
+const dropDownParentLinks = document.querySelector('.mainLi.dropDownParent a');
+dropDownParentLinks.addEventListener('click', toggleMenuLinks, false);
+
+function toggleMenuLinks() {
+    const subMenuWrapper = document.getElementById('subMenuWrapper').classList;
+    const subMenu = document.getElementById('subMenu').classList;
+    const dropDownParentLi = document.querySelector('.mainLi.dropDownParent').classList;
+
+    subMenuWrapper.toggle("show");
+    subMenu.toggle("show");
+    dropDownParentLi.toggle('activeState');
+    if(dropDownParentLi.contains('activeState')) {
+        dropDownParentLinks.style.color ="black";
+    } else if(!dropDownParentLi.contains('activeState')) {
+        dropDownParentLinks.style.color ="#b27300";
+    }
+    
+}
 
 function clickOffSearch(event) {
     const searchBarLink = document.querySelector('.searchBarItem');
     const searchBar = document.getElementById('searchContainer');
+
     // tracking the users clicks, if the clicks are within these three elements, then return nothing. Which will not close the search bar
     if(event.target.closest('#logoWrapper') || event.target.closest('#mainNavigation') || event.target.closest('#searchContainer')) return;
 
